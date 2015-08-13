@@ -1,21 +1,18 @@
 $(document).ready(function(){
-	var list = 0;
-	var count = 100;
-	for (var i = 0; i < count; i++){ 
+ 	var count = prompt("Enter a number: ");
+	for (var i = 1; i < count; i++){ 
 		
-		if(i % 3 ==0){
-			$(".box").append("fizz");
+		if(i % 3 == 0 && i % 5 == 0){
+			$(".box").append("<p>fizzbuzz</p>");
 		}
 		else if(i % 5 == 0){
-			$(".box").append("buzz");
+			$(".box").append("<p>buzz</p>");
 		}
-		else if(i % 5 == 0 && i % 3 ==0 ){
-			$(".box").append("fizzbuzz");
+		else if(i % 3 ==0 ){
+			$(".box").append("<p>fizz</p>");
+		} else {
+			$(".box").append("<p>"+i+"</p>");
 		}
-
-		console.log(count);
-		print(count);
 	};
-	
 
 });
